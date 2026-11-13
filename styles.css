@@ -44,17 +44,18 @@ body {
 .notice {
   position: absolute;
   left: 254px;
-  top: 340px;
+  top: 50%;
   width: 980px;
+  transform: translateY(-52%);
   z-index: 1;
   color: var(--brown);
 }
 
 .logo {
   display: block;
-  width: 340px;
+  width: 280px;
   height: auto;
-  margin: 0 0 28px;
+  margin: 0 0 26px;
   background: transparent;
 }
 
