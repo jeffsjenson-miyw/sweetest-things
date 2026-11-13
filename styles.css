@@ -16,25 +16,27 @@ body {
 
 .hero {
   min-height: 100vh;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr minmax(22rem, 32rem) minmax(18rem, 48%);
   align-items: center;
-  padding: 48px 7vw 88px;
+  padding: 48px 3vw 88px;
   background:
-    linear-gradient(90deg, rgba(231, 221, 208, 0.94) 0%, rgba(231, 221, 208, 0.78) 38%, rgba(231, 221, 208, 0.08) 62%),
+    linear-gradient(90deg, rgba(231, 221, 208, 0.35) 0%, rgba(231, 221, 208, 0.72) 34%, rgba(231, 221, 208, 0.55) 52%, rgba(231, 221, 208, 0) 66%),
     url("images/hero.jpg") right center / cover no-repeat,
     var(--cream);
   position: relative;
 }
 
 .notice {
-  width: min(34rem, 100%);
+  grid-column: 2;
+  width: 100%;
   position: relative;
   z-index: 1;
 }
 
 .brand {
   margin: 0 0 18px;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -42,25 +44,25 @@ body {
 
 h1 {
   margin: 0;
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-size: clamp(3.4rem, 6vw, 5.1rem);
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.08;
   letter-spacing: -0.02em;
 }
 
 .note {
-  margin: 16px 0 0;
-  max-width: 28rem;
-  font-size: 1.25rem;
+  margin: 18px 0 0;
+  max-width: 36rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 .call {
-  margin: 22px 0 0;
-  font-size: 1.35rem;
+  margin: 26px 0 0;
+  font-size: 1.75rem;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 .call a {
@@ -86,8 +88,9 @@ h1 {
   outline-offset: 3px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .hero {
+    display: flex;
     align-items: flex-start;
     padding: 48px 22px 96px;
     background:
@@ -96,5 +99,11 @@ h1 {
       var(--cream);
   }
 
-  .note { font-size: 1.12rem; }
+  .notice { width: min(100%, 36rem); }
+
+  h1 { font-size: 3.1rem; }
+
+  .note { font-size: 1.3rem; }
+
+  .call { font-size: 1.45rem; }
 }
