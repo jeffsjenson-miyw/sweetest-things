@@ -57,23 +57,15 @@ h1 {
 }
 
 .call {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 28px;
-  min-height: 52px;
-  padding: 12px 28px;
-  border-radius: 999px;
-  background: var(--brown);
-  color: var(--white);
-  text-decoration: none;
-  font-size: 1.15rem;
+  margin: 22px 0 0;
+  font-size: 1.35rem;
   font-weight: 700;
+  line-height: 1.4;
 }
 
-.call:hover,
-.call:focus-visible {
-  background: #2f1a0e;
+.call a {
+  color: var(--brown);
+  text-decoration: none;
 }
 
 .hero::after {
