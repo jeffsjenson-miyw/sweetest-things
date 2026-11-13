@@ -16,20 +16,19 @@ body {
 
 .hero {
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr minmax(22rem, 32rem) minmax(18rem, 48%);
+  display: flex;
   align-items: center;
-  padding: 48px 3vw 88px;
+  padding: 48px 7vw 88px;
   background:
-    linear-gradient(90deg, rgba(231, 221, 208, 0.35) 0%, rgba(231, 221, 208, 0.72) 34%, rgba(231, 221, 208, 0.55) 52%, rgba(231, 221, 208, 0) 66%),
+    linear-gradient(90deg, rgba(231, 221, 208, 0.94) 0%, rgba(231, 221, 208, 0.78) 42%, rgba(231, 221, 208, 0.08) 64%),
     url("images/hero.jpg") right center / cover no-repeat,
     var(--cream);
   position: relative;
 }
 
 .notice {
-  grid-column: 2;
-  width: 100%;
+  width: min(40rem, calc(100% - 200px));
+  margin-left: 200px;
   position: relative;
   z-index: 1;
 }
@@ -59,15 +58,15 @@ h1 {
 }
 
 .call {
+  display: inline-block;
   margin: 26px 0 0;
-  font-size: 1.75rem;
+  padding: 12px 26px;
+  border-radius: 999px;
+  background: var(--brown);
+  color: var(--white);
+  font-size: 1.45rem;
   font-weight: 700;
-  line-height: 1.35;
-}
-
-.call a {
-  color: var(--brown);
-  text-decoration: none;
+  line-height: 1.3;
 }
 
 .hero::after {
@@ -99,7 +98,10 @@ h1 {
       var(--cream);
   }
 
-  .notice { width: min(100%, 36rem); }
+  .notice {
+    width: min(100%, 36rem);
+    margin-left: 0;
+  }
 
   h1 { font-size: 3.1rem; }
 
