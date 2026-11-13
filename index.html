@@ -8,17 +8,33 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
-  <main class="hero">
-    <div class="notice">
-      <p class="brand">Sweetest Things Baking Co.</p>
-      <h1>Under maintenance</h1>
-      <p class="note">We’re still baking and taking orders by phone.</p>
-      <p class="call">Call to order 210-541-2826</p>
+  <div class="frame">
+    <div class="stage" id="stage">
+      <img class="photo" src="images/hero.jpg" alt="">
+      <div class="notice">
+        <p class="brand">Sweetest Things Baking Co.</p>
+        <h1>Under maintenance</h1>
+        <p class="note">We’re still baking and taking orders by phone.</p>
+        <p class="call">Call to order 210-541-2826</p>
+      </div>
     </div>
-  </main>
+  </div>
+  <script>
+    (function () {
+      var stage = document.getElementById("stage");
+      var width = 2567;
+      var height = 1760;
+      function fit() {
+        var scale = Math.max(window.innerWidth / width, window.innerHeight / height);
+        stage.style.transform = "translate(-50%, -50%) scale(" + scale + ")";
+      }
+      window.addEventListener("resize", fit);
+      fit();
+    }());
+  </script>
 </body>
 </html>
